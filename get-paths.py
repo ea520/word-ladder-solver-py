@@ -1,7 +1,5 @@
 import json
 import argparse
-
-from sklearn import neighbors
 import util
 
 
@@ -15,7 +13,6 @@ def get_distances(start, end, graph):
     while True:
         candidate = min(
             unvisited, key=lambda el: distances[el] + hammings[el])
-        # closest_to_start = min(unvisited, key=lambda el: distances[el])
 
         if(distances[candidate] == large_dist or candidate == end):
             break

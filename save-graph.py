@@ -44,5 +44,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--words", default="word-list.txt", type=str,
                         help="a path to the newline separated list of words")
+    parser.add_argument("--out", default="graph.json", type=str,
+                        help="the name of the output file")
     args = parser.parse_args()
-    json.dump(get_graph(args.words), fp=open("graph.json", "w"), indent=4)
+    json.dump(get_graph(args.words), fp=open(args.out, "w"), indent=4)
