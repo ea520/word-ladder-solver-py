@@ -11,7 +11,7 @@ Example output
 ```
 HELLO -> WORLD
 6
-HELLO->HELLS->HEALS->HEALD->WEALD->WOALD->WORLD
+HELLO -> HELLS -> HEALS -> HEALD -> WEALD -> WOALD -> WORLD
 ```
 
 ## Custom graph
