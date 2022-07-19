@@ -66,5 +66,6 @@ foo.json would be
     ]
 }
 ```
+![graph](img/graph.png)
 
 Note the ~300,000 word scrabble dictionary took several hours to form the graph
