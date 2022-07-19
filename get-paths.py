@@ -25,7 +25,7 @@ def get_distances(start, end, graph):
     return distances
 
 
-def get_path(node, distances, words):
+def get_path(node, distances, words, graph):
     my_dist = distances[node]
     large_dist = len(distances) + 1
     if(my_dist == large_dist):
@@ -33,7 +33,7 @@ def get_path(node, distances, words):
     elif(my_dist == 0):
         return [node]
     else:
-        neighbors = util.get_neighbours(node, words)
+        neighbors = graph[node]
         next = None
         for s in neighbors:
             if distances[s] == distances[node] - 1:
@@ -41,7 +41,7 @@ def get_path(node, distances, words):
                 break
         if(next == None):
             raise RuntimeError("An unknown error occured")
-        out = get_path(next, distances, words)
+        out = get_path(next, distances, words, graph)
         out.append(node)
         return out
 
@@ -72,4 +72,4 @@ if __name__ == "__main__":
     words = tuple(word for word in graph if len(word) == len(start))
     dists = get_distances(start, end, graph)
     print("Optimal path length:", dists[end])
-    print(*get_path(end, dists, words), sep=" -> ")
+    print(*get_path(end, dists, words, graph), sep=" -> ")
