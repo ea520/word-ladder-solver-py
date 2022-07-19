@@ -71,5 +71,5 @@ if __name__ == "__main__":
     print(start, "->", end)
     words = tuple(word for word in graph if len(word) == len(start))
     dists = get_distances(start, end, graph)
-    print(dists[end])
-    print(*get_path(end, dists, words), sep="->")
+    print("Optimal path length:", dists[end])
+    print(*get_path(end, dists, words), sep=" -> ")
