@@ -3,7 +3,7 @@
 Unzip the graph file to get graph.json
 
 ```bash
-python get-paths.py --start hello --end world --graph /path/to/graph.json
+python get-paths.py --start hello --end world --graph /path/to/graph.json --bfs
 ```
 
 Example output

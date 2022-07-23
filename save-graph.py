@@ -1,9 +1,9 @@
-from ctypes import util
 from datetime import timedelta
 import json
 import argparse
 from time import time
 import util
+import json
 
 
 def get_words_by_size(words):
