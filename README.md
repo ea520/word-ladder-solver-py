@@ -16,9 +16,9 @@ HELLO -> HELLS -> HEALS -> HEALD -> WEALD -> WOALD -> WORLD
 
 ## Custom graph
 Make a new line separated file of words in the dictionary (case insensitive)
-python .\save-graph.py --out foo.json --words words.txt
+python .\save-graph.py --out words.json --words words.txt
 
-if words.json was 
+if words.txt was 
 ```
 hello
 hells
@@ -30,7 +30,7 @@ fell
 sell
 hill
 ```
-foo.json would be
+words.json would be
 ```json
 {
     "HELLO": [
@@ -66,6 +66,7 @@ foo.json would be
     ]
 }
 ```
+And the graph would look like this
 ![graph](img/graph.png)
 
 Note the ~300,000 word scrabble dictionary took several hours to form the graph
